@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.ronny.guessthenumber.HelpActivity"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/tv_helpTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Aim:"
+            android:textSize="20sp"
+            android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"/>
+        <TextView
+            android:id="@+id/tv_instruction1"
+            android:layout_below="@id/tv_helpTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="At the start of every game, a four digit number will be generated. For each guess, a response will be given\n\n"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tv_correct"
+            android:layout_below="@id/tv_instruction1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="If a guessed digit is the same location as it is in the hidden number, a double-tick will be given\n\n"
+            android:textSize="19sp"/>
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tv_correct"
+            android:layout_below="@id/tv_instruction1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_done_all_black_24dp"/>
+        <TextView
+            android:id="@+id/tv_okay"
+            android:layout_below="@id/tv_correct"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="If a digit in the guessed number exists in the hidden number, but is at a different location, a single tick will be given\n\n"
+            android:textSize="19sp"/>
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tv_okay"
+            android:layout_below="@id/tv_correct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_done_black_24dp"/>
+        <TextView
+            android:id="@+id/tv_wrong"
+            android:layout_below="@id/tv_okay"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="If a digit in the guessed number does not exist in the hidden number, a cross will be given\n\n"
+            android:textSize="20sp"/>
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tv_wrong"
+            android:layout_below="@id/tv_okay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_black_24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_wrong"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            android:text="Guess the hidden number in the least number of guesses! Good luck!"/>
+    </RelativeLayout>
+</ScrollView>
